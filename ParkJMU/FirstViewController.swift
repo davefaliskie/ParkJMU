@@ -52,8 +52,11 @@ class FirstViewController: UIViewController,UIPickerViewDataSource,UIPickerViewD
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return locations.count
     }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return locations[row]
+
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleData = locations[row]
+        var myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
+        return myTitle
     }
     
 

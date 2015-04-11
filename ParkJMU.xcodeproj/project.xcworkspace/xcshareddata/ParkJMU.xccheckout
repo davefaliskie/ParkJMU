@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>40D9989B-435B-4A58-821B-2D22766CD921</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ParkJMU</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B4A402B69AEA393EEA924BF51F82907EEE0C64E7</key>
+		<string>https://github.com/davefaliskie/ParkJMU.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ParkJMU.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B4A402B69AEA393EEA924BF51F82907EEE0C64E7</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/davefaliskie/ParkJMU.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B4A402B69AEA393EEA924BF51F82907EEE0C64E7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B4A402B69AEA393EEA924BF51F82907EEE0C64E7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ParkJMU</string>
+		</dict>
+	</array>
+</dict>
+</plist>
