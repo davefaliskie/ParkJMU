@@ -25,17 +25,70 @@ class FirstViewController: UIViewController,UIPickerViewDataSource,UIPickerViewD
     
 
     @IBAction func LotResetButton() {
-        AvailableSpotsLabel.text = spots.randomSpace()
+//        AvailableSpotsLabel.text = spots.randomSpace()
     }
     
+
+    @IBOutlet weak var SpacesLabel: UILabel!
+    
+    
+
 
     
 // ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        for the picker view
         lotPicker.dataSource = self
         lotPicker.delegate = self
-        AvailableSpotsLabel.text = spots.randomSpace()
+        
+//        for the spots label
+//        AvailableSpotsLabel.text = spots.randomSpace()
+        
+//        for the JSON Data retreival
+        var lotKey = "?lot=C10"
+        
+        let baseURL = NSURL(string: "http://134.126.65.63/getlotdata.php")
+        let lotURL = NSURL(string: "\(lotKey)", relativeToURL: baseURL)
+        
+        
+        let sharedSession = NSURLSession.sharedSession()
+        
+        let downloadTask: NSURLSessionDownloadTask =
+            sharedSession.downloadTaskWithURL(lotURL!,
+            completionHandler: { (location: NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
+                
+//            CHECKS FOR JSON DATA AND RETURNS IT
+//            var urlContents = NSString(contentsOfURL: location, encoding: NSUTF8StringEncoding, error: nil)
+//            println(urlContents)
+            
+                if(error == nil){
+                    
+                    let dataObject = NSData(contentsOfURL: location)
+                    
+                    let lotDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as! NSDictionary
+                    
+                    let currentLotName: NSArray = lotDictionary["LotResults"] as! NSArray
+                    
+                    let LotName: NSDictionary = currentLotName[0] as! NSDictionary
+                    
+                    self.SpacesLabel.text =  (LotName["lot_name"] as! String)
+                    
+                    self.AvailableSpotsLabel.text = (LotName["available"] as! String)
+                
+                }
+                
+        })
+        
+
+        downloadTask.resume()
+        
+        
+        
+        
+    
+        
         
     }
 // didRecieveMemoryWarning
