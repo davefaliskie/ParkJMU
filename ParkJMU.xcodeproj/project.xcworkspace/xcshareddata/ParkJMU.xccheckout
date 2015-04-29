@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>40D9989B-435B-4A58-821B-2D22766CD921</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>ParkJMU</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>B4A402B69AEA393EEA924BF51F82907EEE0C64E7</key>
 		<string>https://github.com/davefaliskie/ParkJMU.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ParkJMU.xcodeproj/project.xcworkspace</string>
+	<string>ParkJMU.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>B4A402B69AEA393EEA924BF51F82907EEE0C64E7</key>

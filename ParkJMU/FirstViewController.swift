@@ -47,7 +47,7 @@ class FirstViewController: UIViewController,UIPickerViewDataSource,UIPickerViewD
 //        AvailableSpotsLabel.text = spots.randomSpace()
         
 //        for the JSON Data retreival
-        var lotKey = "?lot=C10"
+        var lotKey = ""
         
         let baseURL = NSURL(string: "http://134.126.65.63/getlotdata.php")
         let lotURL = NSURL(string: "\(lotKey)", relativeToURL: baseURL)
@@ -69,13 +69,17 @@ class FirstViewController: UIViewController,UIPickerViewDataSource,UIPickerViewD
                     
                     let lotDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(dataObject!, options: nil, error: nil) as! NSDictionary
                     
-                    let currentLotName: NSArray = lotDictionary["LotResults"] as! NSArray
+//                    let currentLotName: NSArray = lotDictionary["LotResults"] as! NSArray
+//                    
+//                    let LotName: NSDictionary = currentLotName[0] as! NSDictionary
                     
-                    let LotName: NSDictionary = currentLotName[0] as! NSDictionary
+//                    self.SpacesLabel.text =  (LotName["lot_name"] as! String)
+//                    
+//                    self.AvailableSpotsLabel.text = (LotName["available"] as! String)
                     
-                    self.SpacesLabel.text =  (LotName["lot_name"] as! String)
-                    
-                    self.AvailableSpotsLabel.text = (LotName["available"] as! String)
+                    let currentParkingLot = Current(lotDictionary: lotDictionary)
+
+                    println(currentParkingLot.lot_name)
                 
                 }
                 
