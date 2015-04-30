@@ -27,16 +27,19 @@ struct Spots {
 
 // unwrapped JSON object
 struct Current {
+    
+    var all_lot_names = []
+    
     var lot_name: String
     var campus_location: String
     var capacity: String
     var available: String
     var backup_lot: String
     
-    init(lotDictionary: NSDictionary) {
+    init(lotDictionary: NSDictionary, lot_num: Int) {
         let currentLotName: NSArray = lotDictionary["LotResults"] as! NSArray
         
-        let LotName: NSDictionary = currentLotName[0] as! NSDictionary
+        let LotName: NSDictionary = currentLotName[lot_num] as! NSDictionary
         
         lot_name = LotName["lot_name"] as! String
         campus_location = LotName["campus_location"] as! String
@@ -44,12 +47,19 @@ struct Current {
         available = LotName["available"] as! String
         backup_lot = LotName["backup_lot"] as! String
     }
-    
 }
-
-struct GetLotNames {
     
-    
+    func GetLotNames(lotDictionary: NSDictionary) -> NSArray {
+        
+        var all:[String] = []
+        
+        let currentLotName: NSArray = lotDictionary["LotResults"] as! NSArray
+            
+            for i in 0...currentLotName.count-1{
+                let LotName: NSDictionary = currentLotName[i] as! NSDictionary
+                all.append(LotName["lot_name"] as! String)
+            }
+        return all
 }
 
 
