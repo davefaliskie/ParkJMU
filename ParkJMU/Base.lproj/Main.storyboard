@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--First View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="ParkJMU" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,7 +92,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="AvailableSpotsLabel" destination="aWm-K8-cg1" id="IE5-KM-bh8"/>
                         <outlet property="BackupLabel" destination="o1R-9G-0Ip" id="Zxv-se-9WK"/>
@@ -105,7 +105,7 @@
             </objects>
             <point key="canvasLocation" x="400" y="-303"/>
         </scene>
-        <!--Second-->
+        <!--Map-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="ParkJMU" customModuleProvider="target" sceneMemberID="viewController">
@@ -120,7 +120,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="Map Marker-32" selectedImage="Map Marker-32" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="map" destination="KAj-jb-BgY" id="en7-lE-i9W"/>
                     </connections>
@@ -137,7 +137,6 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -150,11 +149,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Map Marker-32" width="32" height="32"/>
         <image name="Park_JMU_icon" width="632" height="200"/>
         <image name="duke_dog" width="2848" height="4272"/>
-        <image name="first" width="30" height="30"/>
         <image name="paw_print" width="4106" height="3765"/>
-        <image name="second" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
